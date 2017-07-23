@@ -12,7 +12,7 @@ using VirtoCommerce.Platform.Core.Common;
 using VirtoCommerce.Platform.Core.ExportImport;
 using VirtoCommerce.Platform.Data.Common;
 
-namespace VirtoCommerce.CatalogModule.Web.ExportImport
+namespace VirtoCommerce.CatalogModule.Data.ExportImport
 {
     public sealed class CatalogExportImport
     {

@@ -1,6 +1,6 @@
 ﻿using VirtoCommerce.Platform.Core.Common;
 
-namespace VirtoCommerce.CatalogModule.Web.ExportImport
+namespace VirtoCommerce.CatalogModule.Data.ExportImport
 {
     public class CsvProductPropertyMap : ValueObject<CsvProductPropertyMap>
     {

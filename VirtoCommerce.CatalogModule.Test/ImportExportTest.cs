@@ -7,8 +7,6 @@ using FluentValidation;
 using Moq;
 using VirtoCommerce.CatalogModule.Data.Repositories;
 using VirtoCommerce.CatalogModule.Data.Services;
-using VirtoCommerce.CatalogModule.Data.Services.Validation;
-using VirtoCommerce.CatalogModule.Web.ExportImport;
 using VirtoCommerce.CoreModule.Data.Repositories;
 using VirtoCommerce.CoreModule.Data.Services;
 using VirtoCommerce.Domain.Catalog.Model;
@@ -16,6 +14,8 @@ using VirtoCommerce.Domain.Catalog.Services;
 using VirtoCommerce.Domain.Commerce.Services;
 using VirtoCommerce.Platform.Data.Infrastructure.Interceptors;
 using Xunit;
+using VirtoCommerce.CatalogModule.Data.ExportImport;
+using VirtoCommerce.CatalogModule.Data.ExportImport.Mapping;
 
 namespace VirtoCommerce.CatalogModule.Test
 {
@@ -30,7 +30,7 @@ namespace VirtoCommerce.CatalogModule.Test
 
             var csvProducts = searchResult.Products
                 .Select(p => itemService.GetById(p.Id, ItemResponseGroup.ItemLarge))
-                .Select(p => new CsvProduct(p, null, null, null))
+                .Select(p => new CsvProduct())
                 .ToList();
 
             var importConfiguration = GetMappingConfiguration();

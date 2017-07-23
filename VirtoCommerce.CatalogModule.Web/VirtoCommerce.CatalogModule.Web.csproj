@@ -158,11 +158,6 @@
     <Compile Include="Controllers\Api\CatalogModulePropertiesController.cs" />
     <Compile Include="Converters\ImportJobConverter.cs" />
     <Compile Include="Converters\ImportMappingItemConverter.cs" />
-    <Compile Include="ExportImport\CatalogExportImport.cs" />
-    <Compile Include="ExportImport\CsvCatalogExporter.cs" />
-    <Compile Include="ExportImport\CsvCatalogImporter.cs" />
-    <Compile Include="ExportImport\ExpressionConverter.cs" />
-    <Compile Include="ExportImport\CsvProductMap.cs" />
     <Compile Include="JsonConverters\CategorySearchCriteriaJsonConverter.cs" />
     <Compile Include="JsonConverters\ProductSearchCriteriaJsonConverter.cs" />
     <Compile Include="Model\PushNotifications\ExportNotification.cs" />

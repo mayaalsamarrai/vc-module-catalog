@@ -2,7 +2,7 @@
 using CsvHelper.Configuration;
 using CsvHelper.TypeConversion;
 
-namespace VirtoCommerce.CatalogModule.Web.ExportImport
+namespace VirtoCommerce.CatalogModule.Data.ExportImport
 {
     public class ExpressionConverter<T> : ITypeConverter
     {

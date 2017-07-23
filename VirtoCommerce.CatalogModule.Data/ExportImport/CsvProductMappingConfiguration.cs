@@ -2,7 +2,7 @@
 using System.Linq;
 using VirtoCommerce.Platform.Core.Common;
 
-namespace VirtoCommerce.CatalogModule.Web.ExportImport
+namespace VirtoCommerce.CatalogModule.Data.ExportImport
 {
     public class CsvProductMappingConfiguration
     {
@@ -22,12 +22,12 @@ namespace VirtoCommerce.CatalogModule.Web.ExportImport
             var retVal = new CsvProductMappingConfiguration { Delimiter = ";" };
 
             var requiredFields = ReflectionUtility.GetPropertyNames<CsvProduct>(x => x.Name);
-            var optionalFields = ReflectionUtility.GetPropertyNames<CsvProduct>(x => x.Id, x => x.Sku, x => x.CategoryPath, x => x.CategoryId, x => x.MainProductId, x => x.PrimaryImage, x => x.AltImage, x => x.SeoUrl, x => x.SeoTitle,
+            var optionalFields = ReflectionUtility.GetPropertyNames<CsvProduct>(x => x.Id, x => x.Sku, x => x.MainProductId, x => x.PrimaryImage, x => x.AltImage, x => x.SeoUrl, x => x.SeoTitle,
                                                                                 x => x.SeoDescription, x => x.Review, x => x.ReviewType, x => x.IsActive, x => x.IsBuyable, x => x.TrackInventory,
-                                                                                x => x.PriceId, x => x.SalePrice, x => x.ListPrice, x => x.Currency, x => x.Quantity,
-                                                                                x => x.ManufacturerPartNumber, x => x.Gtin, x => x.MeasureUnit, x => x.WeightUnit, x => x.Weight,
+                                                                                x => x.Gtin, x => x.MeasureUnit, x => x.WeightUnit, x => x.Weight,
                                                                                 x => x.Height, x => x.Length, x => x.Width, x => x.TaxType, x => x.ProductType, x => x.ShippingType,
-                                                                                x => x.Vendor, x => x.DownloadType, x => x.DownloadExpiration, x => x.HasUserAgreement);
+                                                                                x => x.Vendor)
+                                                                                .Concat(ReflectionUtility.GetPropertyNames<CsvCategory>(x => x.CategoryId, x => x.CategoryPath));
 
             retVal.PropertyMaps = requiredFields.Select(x => new CsvProductPropertyMap { EntityColumnName = x, CsvColumnName = x, IsRequired = true }).ToList();
             retVal.PropertyMaps.AddRange(optionalFields.Select(x => new CsvProductPropertyMap { EntityColumnName = x, CsvColumnName = x, IsRequired = false }));

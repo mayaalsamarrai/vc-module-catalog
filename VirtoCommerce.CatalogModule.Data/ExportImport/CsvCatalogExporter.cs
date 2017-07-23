@@ -11,8 +11,9 @@ using VirtoCommerce.Domain.Pricing.Model;
 using VirtoCommerce.Domain.Pricing.Services;
 using VirtoCommerce.Platform.Core.Assets;
 using VirtoCommerce.Platform.Core.ExportImport;
+using VirtoCommerce.CatalogModule.Data.ExportImport.Mapping;
 
-namespace VirtoCommerce.CatalogModule.Web.ExportImport
+namespace VirtoCommerce.CatalogModule.Data.ExportImport
 {
     public sealed class CsvCatalogExporter
     {
@@ -85,7 +86,8 @@ namespace VirtoCommerce.CatalogModule.Web.ExportImport
                 {
                     try
                     {
-                        var csvProduct = new CsvProduct(product, _blobUrlResolver, allProductPrices.FirstOrDefault(x => x.ProductId == product.Id), allProductInventories.FirstOrDefault(x => x.ProductId == product.Id));
+                        //var csvProduct = new CsvProduct(product, _blobUrlResolver, allProductPrices.FirstOrDefault(x => x.ProductId == product.Id), allProductInventories.FirstOrDefault(x => x.ProductId == product.Id));
+                        var csvProduct = new CsvProduct();
                         csvWriter.WriteRecord(csvProduct);
                     }
                     catch (Exception ex)

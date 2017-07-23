@@ -6,7 +6,6 @@ using System.Web.Http.Description;
 using CsvHelper;
 using Hangfire;
 using Omu.ValueInjecter;
-using VirtoCommerce.CatalogModule.Web.ExportImport;
 using VirtoCommerce.CatalogModule.Web.Model.PushNotifications;
 using VirtoCommerce.CatalogModule.Web.Security;
 using VirtoCommerce.Domain.Catalog.Services;
@@ -16,6 +15,7 @@ using VirtoCommerce.Platform.Core.ExportImport;
 using VirtoCommerce.Platform.Core.PushNotifications;
 using VirtoCommerce.Platform.Core.Security;
 using VirtoCommerce.Platform.Data.Common;
+using VirtoCommerce.CatalogModule.Data.ExportImport;
 
 namespace VirtoCommerce.CatalogModule.Web.Controllers.Api
 {
