@@ -561,6 +561,10 @@
                 "shallow": "Metadata",
                 "full": "Completely"
             },
+            "category-duplicate": {
+                "title": "Duplication warning",
+                "message": "This folder name already exists. Click 'Yes' to create duplicating Category or 'No' to discard."
+            },
             "virtual-catalog-save": {
                 "title": "Save changes",
                 "message": "The virtual catalog has been modified. Do you want to save changes?"

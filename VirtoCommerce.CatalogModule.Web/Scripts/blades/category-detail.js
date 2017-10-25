@@ -53,8 +53,7 @@
         blade.isLoading = true;
         categories.update({}, blade.currentEntity, function (data, headers) {
             blade.refresh(true);
-        },
-        function (error) { bladeNavigationService.setError('Error ' + error.status, blade); });
+        });
     };
 
     blade.onClose = function (closeCallback) {
