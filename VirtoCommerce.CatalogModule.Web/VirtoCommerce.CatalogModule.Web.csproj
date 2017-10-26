@@ -310,7 +310,6 @@
     <Content Include="Scripts\widgets\aggregationPropertiesWidget.tpl.html" />
     <Content Include="Scripts\wizards\newAssociation\association-wizard.js" />
     <Content Include="Scripts\wizards\newAssociation\association-wizard.tpl.html" />
-    <Content Include="Scripts\wizards\newCategory\category-wizard-actions.tpl.html" />
     <Content Include="Scripts\wizards\newCategory\category-wizard.js" />
     <Content Include="Scripts\wizards\newCategory\category-wizard.tpl.html" />
     <Content Include="Scripts\wizards\newProduct\new-product-wizard-actions.tpl.html" />

@@ -104,7 +104,6 @@ namespace VirtoCommerce.CatalogModule.Web.Controllers.Api
             {
                 ParentId = parentCategoryId,
                 CatalogId = catalogId,
-                Code = Guid.NewGuid().ToString().Substring(0, 5),
                 SeoInfos = new List<SeoInfo>(),
                 IsActive = true
             };

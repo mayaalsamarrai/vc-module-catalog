@@ -1,8 +1,20 @@
 ﻿angular.module('virtoCommerce.catalogModule')
     .controller('virtoCommerce.catalogModule.newCategoryWizardController', ['$scope', 'platformWebApp.bladeNavigationService', 'platformWebApp.dialogService', 'virtoCommerce.catalogModule.categories', 'virtoCommerce.catalogModule.listEntries', function ($scope, bladeNavigationService, dialogService, categories, listEntries) {
         var blade = $scope.blade;
+        blade.passNameToCode = true;
 
-        $scope.create = function () {
+        var pattern = /[$+;=%{}[\]|\\\/@ ~!^*&()?:'<>,]/g;
+        $scope.codeValidator = function (value) {            
+            return !pattern.test(value);
+        };
+
+        $scope.nameChanged = function () {
+            if (blade.passNameToCode) {
+                blade.currentEntity.code = blade.currentEntity.name.replace(pattern, "-");
+            }
+        };
+
+        $scope.saveChanges = function () {
             blade.isLoading = true;
 
             listEntries.listitemssearch(
@@ -34,7 +46,7 @@
                         createEntity();
                     }
                 });
-        }
+        };
 
         function createEntity() {
             blade.currentEntity.$update(null, function (data) {
@@ -74,16 +86,9 @@
                     bladeNavigationService.showBlade(newBlade, blade);
                 }
             });
-        }
-
-        $scope.codeValidator = function (value) {
-            var pattern = /[$+;=%{}[\]|\\\/@ ~!^*&()?:'<>,]/;
-            return !pattern.test(value);
         };
 
-        $scope.setForm = function (form) {
-            $scope.formScope = form;
-        }
+        $scope.setForm = function (form) { $scope.formScope = form; };
 
         blade.isLoading = false;
     }]);
