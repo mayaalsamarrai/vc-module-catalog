@@ -149,6 +149,8 @@ Expandability points:
 - additional widgets in category detail;
 - additional widgets in item detail.
 
+[Bulk Update](/docs/bulk-update-function.md)
+
 ## VirtoCommerce Search
 
 The solution uses Search as primary tool for customer interaction. The customers expect high-level relevance, multiple-languages and near-instantaneous responses.
