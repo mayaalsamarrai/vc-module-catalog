@@ -124,6 +124,8 @@ Every property has its “Assign to” trait set to one of: “catalog”, “ca
 
 [Manage Properties](/docs/manage-properties.md)
 
+[Bulk Update](/docs/bulk-update-function.md)
+
 ### Linked Category
 
 Common category has the same meaning as the category in common catalogs. User can create common category and link products to it or create linked category in it.
@@ -149,7 +151,7 @@ Expandability points:
 - additional widgets in category detail;
 - additional widgets in item detail.
 
-[Bulk Update](/docs/bulk-update-function.md)
+
 
 ## VirtoCommerce Search
 
