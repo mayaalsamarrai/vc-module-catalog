@@ -58,15 +58,5 @@
 
 ![Add Product Property](media/screen-add-item-property.png)
 
-### Manage more than 400 Properties
 
-1. Open Catalog Module→Select Catalog→Select Category→Select a product→open Properties widget;
-1. The system will display the entire list of properties
-1. Select 'Add filter';
-1. All product properties with editing possibility will be displayed;
-1. Remove the properties you don't need to manage from the list and click the 'OK' button;
-1. The selected product properties will be then displayed on the Properties blade.
 
-![Add Property Filter](media/screen-add-property-filter.png)
-
-![Select Property to Edit](media/screen-select-property-to-edit.png)
